@@ -35,31 +35,9 @@ src/
  ├── components/     # Componentes reutilizables
  ├── pages/          # Páginas principales (Landing, Login, Register, Dashboard)
  ├── context/        # Contextos para manejo de estado global
- ├── services/       # Configuración Firebase o Supabase
+ ├── services/       # Configuración Firebase 
  ├── App.tsx         # Configuración principal de rutas
  └── main.tsx        # Punto de entrada
-
-## ⚙️ Instalación y configuración
-
----
-
-### 1️⃣ Clonar el repositorio
-Ejecuta el siguiente comando en tu terminal:
-```bash
-git clone https://github.com/SofCardona/kodigo-api-frontend-react
-cd nombre-repo
-npm install
----
-
-### 3️⃣ Configurar variables de entorno
-Crea un archivo `.env` en la raíz del proyecto y agrega las credenciales necesarias para **Firebase**.
-
-```env
-VITE_API_KEY=your_api_key
-VITE_AUTH_DOMAIN=your_auth_domain
-VITE_PROJECT_ID=your_project_id
-VITE_SUPABASE_URL=your_supabase_url
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 
 ## Enlace al proyecto en Netlify
 
