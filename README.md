@@ -1,62 +1,66 @@
-# React + TypeScript + Vite
+# Bootcamps Web App – React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web desarrollada con **React**, **TypeScript** y **Vite**, que implementa autenticación de usuarios y manejo de datos usando **Firebase** o **Supabase** como backend.  
+El objetivo es permitir el registro, inicio de sesión y visualización de un dashboard protegido con información sobre bootcamps disponibles.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Funcionalidades
 
-## Expanding the ESLint configuration
+- **Autenticación de usuarios** con Firebase Auth.
+- **Manejo automático de tokens de sesión** provisto por la plataforma elegida.  
+- **Persistencia de sesión** para mantener a los usuarios logueados.  
+- **Página de inicio (Landing Page)** con información de bootcamps desde **Firestore**.  
+- **Registro de nuevos usuarios** mediante formulario validado.  
+- **Inicio de sesión seguro** usando el sistema de autenticación.  
+- **Dashboard protegido** accesible únicamente para usuarios autenticados.  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
+## 🛠️ Tecnologías utilizadas
 
-      ...tseslint.configs.recommendedTypeChecked,
-      ...tseslint.configs.strictTypeChecked,
-      ...tseslint.configs.stylisticTypeChecked,
+- **React + Vite + TypeScript**  
+- **React Router** para manejo de rutas  
+- **React Hook Form** para validación de formularios  
+- **Firebase** para backend  
+- **React Hooks**: `useState`, `useEffect`, `useContext`  
+- **HTML5 + CSS3** con diseño responsive  
 
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📂 Estructura del proyecto
 
-```js
+```plaintext
+src/
+ ├── components/     # Componentes reutilizables
+ ├── pages/          # Páginas principales (Landing, Login, Register, Dashboard)
+ ├── context/        # Contextos para manejo de estado global
+ ├── services/       # Configuración Firebase o Supabase
+ ├── App.tsx         # Configuración principal de rutas
+ └── main.tsx        # Punto de entrada
 
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Instalación y configuración
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
+---
 
-      reactX.configs['recommended-typescript'],
+### 1️⃣ Clonar el repositorio
+Ejecuta el siguiente comando en tu terminal:
+```bash
+git clone https://github.com/usuario/nombre-repo.git
+cd nombre-repo
+npm install
+---
 
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-    
-    },
-  },
-])
-```
+### 3️⃣ Configurar variables de entorno
+Crea un archivo `.env` en la raíz del proyecto y agrega las credenciales necesarias para **Firebase**.
+
+```env
+VITE_API_KEY=your_api_key
+VITE_AUTH_DOMAIN=your_auth_domain
+VITE_PROJECT_ID=your_project_id
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+
+## Enlace al proyecto en Netlify
+
+Puedes ver la aplicación en vivo aquí: [Animated Naiad](https://animated-naiad-8ea781.netlify.app/)
