@@ -46,7 +46,7 @@ src/
 ### 1️⃣ Clonar el repositorio
 Ejecuta el siguiente comando en tu terminal:
 ```bash
-git clone https://github.com/usuario/nombre-repo.git
+git clone https://github.com/SofCardona/kodigo-api-frontend-react
 cd nombre-repo
 npm install
 ---
